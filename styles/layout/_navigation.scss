@@ -1,12 +1,57 @@
+@use '../function/index' as *;
+@use '../abstract/mixin' as *;
+
 .navbar {
   display: flex;
   justify-content: space-between;
   position: relative;
+  padding: var(--s-space-4);
 
-  &__nav {
-    position: absolute;
-    inset: 0;
+  &__logo {
+    display: relative;
+    width: to-rem(150);
+    z-index: 1;
+  }
+
+  &__toggler {
+    display: relative;
+    z-index: 1;
+
+    cursor: pointer;
+
+    #close {
+      display: none;
+    }
+  }
+
+  & .nav {
     text-align: left;
-    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+
+    & .active {
+      display: block;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      background: var(--clr-primary-black);
+      min-height: 100vh;
+    }
+
+    &__item {
+      padding: var(--s-space-3) var(--s-space-4);
+    }
+
+    &__link {
+      @include fonts-props(24, var(--ff-fly-Alata), var(--fw-wgt-regular));
+      color: var(--clr-primary-white);
+      display: block;
+    }
   }
 }
