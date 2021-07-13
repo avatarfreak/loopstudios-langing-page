@@ -18,7 +18,7 @@
     h1 {
       @include fonts-props(32, var(--ff-fly-Jose), var(--fw-wgt-thin));
       border: 2px solid var(--clr-primary-white);
-      padding: var(--s-space-2);
+      padding: var(--s-space-3);
       margin: var(--s-space-4);
       text-transform: uppercase;
     }
