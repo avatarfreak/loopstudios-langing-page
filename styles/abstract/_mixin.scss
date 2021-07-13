@@ -13,7 +13,15 @@
   $class: map-merge-multiple($variables...);
   @each $order, $family in $class {
     @each $genus, $species in map.get($family, "values") {
-      --#{map.get($family, 'class')}-#{$genus}: #{$species};
+      --#{map.get($family, 'class')}-#{map.get($family, 'property')}-#{$genus}: #{$species};
     }
   }
+}
+
+//font-properties
+@mixin fonts-props($size: null, $family: null, $weight: normal, $line: null) {
+  font-size: to-rem($size);
+  font-family: $family;
+  font-weight: $weight;
+  line-height: $line;
 }
