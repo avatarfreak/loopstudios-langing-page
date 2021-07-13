@@ -9,14 +9,25 @@
   font-weight: 300;
 }
 :root {
-  --clr-white: white;
-  --clr-black: black;
-  --clr-dark-gray: #8c8c8c;
-  --clr-very-dark-gray: dimgray;
-  --ff-Alata: 'Alata', sans-serif;
-  --ff-Jose: 'Josefin Sans', sans-serif;
-  --fw-regular: 400;
-  --fw-thin: 300;
+  --clr-primary-white: white;
+  --clr-primary-black: black;
+  --clr-primary-dark-gray: #8c8c8c;
+  --clr-primary-very-dark-gray: dimgray;
+  --clr-accent-light: #7e0594;
+  --ff-fly-Alata: 'Alata', sans-serif;
+  --ff-fly-Jose: 'Josefin Sans', sans-serif;
+  --fw-wgt-regular: 400;
+  --fw-wgt-thin: 300;
+  --l-leading-none: 1;
+  --l-leading-relaxed: 1.625;
+  --l-leading-normal: 1.5;
+  --l-leading-tight: 1.25;
+  --s-space-0: 0;
+  --s-space-1: 0.25rem;
+  --s-space-2: 0.5rem;
+  --s-space-3: 1rem;
+  --s-space-4: 1.5rem;
+  --s-space-5: 3rem;
 }
 
 * {
@@ -59,24 +70,79 @@ body {
   color: #3e52a3;
 }
 
-header {
+.header {
   background: url("../images/mobile/image-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 100vh;
+  position: relative;
+}
+.header__title {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--clr-primary-white);
+  width: 100%;
+}
+.header__title h1 {
+  font-size: 2.1333333333rem;
+  font-family: var(--ff-fly-Jose);
+  font-weight: var(--fw-wgt-thin);
+  border: 2px solid var(--clr-primary-white);
+  padding: var(--s-space-2);
+  margin: var(--s-space-4);
+  text-transform: uppercase;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   position: relative;
+  padding: var(--s-space-4);
 }
-.navbar__nav {
-  position: absolute;
-  inset: 0;
+.navbar__logo {
+  display: relative;
+  width: 10rem;
+  z-index: 1;
+}
+.navbar__toggler {
+  display: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.navbar__toggler #close {
+  display: none;
+}
+.navbar .nav {
   text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+.navbar .nav .active {
+  display: block;
+}
+.navbar .nav__list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--clr-primary-black);
   min-height: 100vh;
+}
+.navbar .nav__item {
+  padding: var(--s-space-3) var(--s-space-4);
+}
+.navbar .nav__link {
+  font-size: 1.6rem;
+  font-family: var(--ff-fly-Alata);
+  font-weight: var(--fw-wgt-regular);
+  color: var(--clr-primary-white);
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */

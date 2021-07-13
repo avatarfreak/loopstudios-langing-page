@@ -1,7 +1,26 @@
 @use "../abstract/" as *;
 
-header {
+.header {
   background: url("../images/mobile/image-hero.jpg");
   @include background-cover();
   min-height: 100vh;
+  position: relative;
+
+  &__title {
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--clr-primary-white);
+    width: 100%;
+
+    h1 {
+      @include fonts-props(32, var(--ff-fly-Jose), var(--fw-wgt-thin));
+      border: 2px solid var(--clr-primary-white);
+      padding: var(--s-space-2);
+      margin: var(--s-space-4);
+      text-transform: uppercase;
+    }
+  }
 }
