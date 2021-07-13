@@ -1,0 +1,73 @@
+@use "../components/button";
+@use "../abstract" as *;
+
+//place holder
+
+.creations {
+  margin-top: var(--s-space-4);
+
+  &__title {
+    @include fonts-props(30, var(--ff-fly-Jose), var(--fw-wgt-thin), var(--l-leading-tight));
+    margin-top: var(--s-space-4);
+    margin-bottom: var(--s-space-4);
+    text-transform: uppercase;
+  }
+  & .gallery {
+    margin-top: var(-s-space-5);
+    &__item {
+      &-bg-img {
+        @include background-cover();
+        @include aspect-ratio(654px, 240px);
+        margin: var(--s-space-4) 0;
+        position: relative;
+      }
+
+      &:first-child {
+        @include bg-img-overlay("../images/mobile/image-deep-earth.jpg");
+      }
+      &:nth-child(2) {
+        @include bg-img-overlay("../images/mobile/image-night-arcade.jpg");
+      }
+      &:nth-child(3) {
+        @include bg-img-overlay("../images/mobile/image-soccer-team.jpg");
+      }
+      &:nth-child(4) {
+        @include bg-img-overlay("../images/mobile/image-grid.jpg");
+        & > * {
+          max-width: 2rem;
+        }
+      }
+      &:nth-child(5) {
+        @include bg-img-overlay("../images/mobile/image-from-above.jpg");
+      }
+      &:nth-child(6) {
+        @include bg-img-overlay("../images/mobile/image-pocket-borealis.jpg");
+      }
+      &:nth-child(7) {
+        @include bg-img-overlay("../images/mobile/image-curiosity.jpg");
+      }
+      &:last-child {
+        @include bg-img-overlay("../images/mobile/image-fisheye.jpg");
+      }
+    }
+
+    &__link {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      text-align: left;
+    }
+    &__caption {
+      @include fonts-props(18, var(--ff-fly-Jose), var(--fw-wgt-thin));
+      position: absolute;
+      text-transform: uppercase;
+      padding: var(--s-space-3);
+      max-width: 8rem;
+      bottom: 0;
+      color: var(--clr-primary-white);
+    }
+  }
+}
