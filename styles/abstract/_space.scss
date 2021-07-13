@@ -1,0 +1,16 @@
+$space: 1rem;
+
+$spaces: (
+  "spaces": (
+    property: "space",
+    class: "s",
+    "values": (
+      0: 0,
+      1: $space * 0.25,
+      2: $space * 0.5,
+      3: $space,
+      4: $space * 1.5,
+      5: $space * 3,
+    ),
+  ),
+);
