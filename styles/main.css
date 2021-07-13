@@ -169,6 +169,7 @@ main {
   line-height: var(--l-leading-tight);
   margin-top: var(--s-space-4);
   margin-bottom: var(--s-space-4);
+  text-transform: uppercase;
 }
 .interactive__text {
   font-size: 0.9375rem;
@@ -176,6 +177,106 @@ main {
   font-weight: var(--fw-wgt-regular);
   line-height: var(--l-leading-relaxed);
   color: var(--clr-primary-very-dark-gray);
+}
+
+.outline-black {
+  font-size: 0.9375rem;
+  font-family: var(--ff-fly-Alata);
+  font-weight: var(--fw-wgt-regular);
+  outline: 2px solid var(--clr-primary-dark-gray);
+  color: var(--clr-primary-black);
+  letter-spacing: var(--s-space-1);
+  display: inline-block;
+  cursor: pointer;
+  padding: var(--s-space-2) var(--s-space-5);
+  text-transform: uppercase;
+}
+.outline-black:hover {
+  color: var(--clr-primary-white);
+  background-color: var(--clr-primary-black);
+  outline: 2px solid var(--clr-primary-black);
+}
+
+.creations {
+  margin-top: var(--s-space-4);
+}
+.creations__title {
+  font-size: 1.875rem;
+  font-family: var(--ff-fly-Jose);
+  font-weight: var(--fw-wgt-thin);
+  line-height: var(--l-leading-tight);
+  margin-top: var(--s-space-4);
+  margin-bottom: var(--s-space-4);
+  text-transform: uppercase;
+}
+.creations .gallery {
+  margin-top: var(-s-space-5);
+}
+.creations .gallery__item-bg-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 36.6972477064%;
+  height: 0;
+  max-height: 240px;
+  max-width: 654px;
+  margin: var(--s-space-4) 0;
+  position: relative;
+}
+.creations .gallery__item:first-child {
+  background-image: url("../images/mobile/image-deep-earth.jpg"), linear-gradient(to bottom, transparent, rgba(3, 3, 3, 0.635));
+  background-blend-mode: multiply;
+}
+.creations .gallery__item:nth-child(2) {
+  background-image: url("../images/mobile/image-night-arcade.jpg"), linear-gradient(to bottom, transparent, rgba(3, 3, 3, 0.635));
+  background-blend-mode: multiply;
+}
+.creations .gallery__item:nth-child(3) {
+  background-image: url("../images/mobile/image-soccer-team.jpg"), linear-gradient(to bottom, transparent, rgba(3, 3, 3, 0.635));
+  background-blend-mode: multiply;
+}
+.creations .gallery__item:nth-child(4) {
+  background-image: url("../images/mobile/image-grid.jpg"), linear-gradient(to bottom, transparent, rgba(3, 3, 3, 0.635));
+  background-blend-mode: multiply;
+}
+.creations .gallery__item:nth-child(4) > * {
+  max-width: 2rem;
+}
+.creations .gallery__item:nth-child(5) {
+  background-image: url("../images/mobile/image-from-above.jpg"), linear-gradient(to bottom, transparent, rgba(3, 3, 3, 0.635));
+  background-blend-mode: multiply;
+}
+.creations .gallery__item:nth-child(6) {
+  background-image: url("../images/mobile/image-pocket-borealis.jpg"), linear-gradient(to bottom, transparent, rgba(3, 3, 3, 0.635));
+  background-blend-mode: multiply;
+}
+.creations .gallery__item:nth-child(7) {
+  background-image: url("../images/mobile/image-curiosity.jpg"), linear-gradient(to bottom, transparent, rgba(3, 3, 3, 0.635));
+  background-blend-mode: multiply;
+}
+.creations .gallery__item:last-child {
+  background-image: url("../images/mobile/image-fisheye.jpg"), linear-gradient(to bottom, transparent, rgba(3, 3, 3, 0.635));
+  background-blend-mode: multiply;
+}
+.creations .gallery__link {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: left;
+}
+.creations .gallery__caption {
+  font-size: 1.125rem;
+  font-family: var(--ff-fly-Jose);
+  font-weight: var(--fw-wgt-thin);
+  position: absolute;
+  text-transform: uppercase;
+  padding: var(--s-space-3);
+  max-width: 8rem;
+  bottom: 0;
+  color: var(--clr-primary-white);
 }
 
 /*# sourceMappingURL=main.css.map */
