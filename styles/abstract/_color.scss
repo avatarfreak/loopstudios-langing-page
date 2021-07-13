@@ -8,17 +8,17 @@ $colors: (
   "primary": (
     property: primary,
     class: clr,
-    values: (
-      white: $White,
-      black: $black,
-      dark-gray: $dark-gray,
-      very-dark-gray: $very-dark-gray,
+    "values": (
+      "white": $White,
+      "black": $black,
+      "dark-gray": $dark-gray,
+      "very-dark-gray": $very-dark-gray,
     ),
   ),
   "accent": (
     property: accent,
     class: clr,
-    values: (
+    "values": (
       "light": $light-pink,
     ),
   ),

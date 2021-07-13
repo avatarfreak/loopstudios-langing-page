@@ -23,7 +23,7 @@ $fonts: (
   "font": (
     property: "fly",
     class: "ff",
-    values: (
+    "values": (
       "Alata": $alata,
       "Jose": $jose,
     ),
@@ -31,19 +31,19 @@ $fonts: (
   "weight": (
     property: "wgt",
     class: "fw",
-    values: (
-      regular: $regular,
-      thin: $thin,
+    "values": (
+      "regular": $regular,
+      "thin": $thin,
     ),
   ),
   "leading": (
     property: "leading",
     class: "l",
-    values: (
-      none: $leading-none,
-      relaxed: $leading-relaxed,
-      normal: $leading-normal,
-      tight: $leading-tight,
+    "values": (
+      "none": $leading-none,
+      "relaxed": $leading-relaxed,
+      "normal": $leading-normal,
+      "tight": $leading-tight,
     ),
   ),
 );
