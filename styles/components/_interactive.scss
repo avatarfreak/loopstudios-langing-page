@@ -1,0 +1,22 @@
+@use '../abstract' as *;
+@use '../function/' as *;
+
+.interactive {
+  margin: var(--s-space-5) 0;
+
+  &__image {
+    background-image: url("../images/mobile/image-interactive.jpg");
+    @include background-cover();
+    @include aspect-ratio(654px, 448px);
+  }
+
+  &__title {
+    @include fonts-props(30, var(--ff-fly-Jose), var(--fw-wgt-thin), var(--l-leading-tight));
+    margin-top: var(--s-space-4);
+    margin-bottom: var(--s-space-4);
+  }
+  &__text {
+    @include fonts-props(15, var(--ff-fly-Alata), var(--fw-wgt-regular), var(--l-leading-relaxed));
+    color: var(--clr-primary-very-dark-gray);
+  }
+}
