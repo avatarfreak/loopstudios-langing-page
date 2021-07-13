@@ -1,12 +1,14 @@
 @use "sass:map";
 @use "../function" as *;
 
+//Background cover
 @mixin background-cover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
+//Custom-variables
 @mixin custom-variables($variables...) {
   $class: map-merge-multiple($variables...);
   @each $order, $family in $class {
