@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "../function" as *;
 
 @mixin background-cover {
   background-repeat: no-repeat;
@@ -6,7 +7,8 @@
   background-position: center;
 }
 
-@mixin custom-variables($class: null) {
+@mixin custom-variables($variables...) {
+  $class: map-merge-multiple($variables...);
   @each $order, $family in $class {
     @each $genus, $species in map.get($family, "values") {
       --#{map.get($family, 'class')}-#{$genus}: #{$species};
