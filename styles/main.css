@@ -37,4 +37,12 @@ body {
   color: #3e52a3;
 }
 
+header {
+  background: url("../../images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
 /*# sourceMappingURL=main.css.map */
