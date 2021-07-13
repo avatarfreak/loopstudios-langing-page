@@ -2,16 +2,24 @@ $White: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
 $dark-gray: hsl(0, 0%, 55%);
 $very-dark-gray: hsl(0, 0%, 41%);
+$light-pink: hsl(291, 93%, 30%);
 
 $colors: (
-  "color": (
-    property: color,
+  "primary": (
+    property: primary,
     class: clr,
     values: (
       white: $White,
       black: $black,
       dark-gray: $dark-gray,
       very-dark-gray: $very-dark-gray,
+    ),
+  ),
+  "accent": (
+    property: accent,
+    class: clr,
+    values: (
+      "light": $light-pink,
     ),
   ),
 );
