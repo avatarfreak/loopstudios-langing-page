@@ -1,0 +1,36 @@
+.footer {
+  background: var(--clr-primary-black);
+  padding: var(--s-space-4);
+  margin-top: var(--s-space-5);
+
+  &__title {
+    padding-bottom: var(--s-space-3);
+    max-width: to-rem(150);
+  }
+
+  &__item {
+    line-height: var(--l-leading-normal);
+  }
+
+  &__link {
+    display: block;
+    color: var(--clr-primary-white);
+    padding: var(--s-space-2) 0;
+  }
+
+  &__social {
+    margin: var(--s-space-4);
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__item {
+      padding: var(--s-space-2);
+    }
+  }
+  &__copyright {
+    font-size: to-rem(12);
+    color: var(--clr-primary-dark-gray);
+  }
+}
