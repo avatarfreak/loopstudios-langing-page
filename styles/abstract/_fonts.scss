@@ -15,9 +15,13 @@ $thin: 300;
 $alata: "'Alata', sans-serif";
 $jose: "'Josefin Sans', sans-serif";
 
+$leading-tight: 1.25;
+$leading-normal: 1.5;
+$leading-none: 1;
+$leading-relaxed: 1.625;
 $fonts: (
   "font": (
-    property: family,
+    property: "fly",
     class: "ff",
     values: (
       "Alata": $alata,
@@ -25,11 +29,21 @@ $fonts: (
     ),
   ),
   "weight": (
-    property: "weight",
+    property: "wgt",
     class: "fw",
     values: (
       regular: $regular,
       thin: $thin,
+    ),
+  ),
+  "leading": (
+    property: "leading",
+    class: "l",
+    values: (
+      none: $leading-none,
+      relaxed: $leading-relaxed,
+      normal: $leading-normal,
+      tight: $leading-tight,
     ),
   ),
 );
