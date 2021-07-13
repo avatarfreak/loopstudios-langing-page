@@ -10,13 +10,26 @@
   font-weight: 300;
 }
 
-$font-stack: (
+$regular: 400;
+$thin: 300;
+$alata: "'Alata', sans-serif";
+$jose: "'Josefin Sans', sans-serif";
+
+$fonts: (
   "font": (
     property: family,
-    class: "fs",
+    class: "ff",
     values: (
-      "Alata": "'Alata', sans-serif",
-      "Jose": "'Josefin Sans', sans-serif",
+      "Alata": $alata,
+      "Jose": $jose,
+    ),
+  ),
+  "weight": (
+    property: "weight",
+    class: "fw",
+    values: (
+      regular: $regular,
+      thin: $thin,
     ),
   ),
 );

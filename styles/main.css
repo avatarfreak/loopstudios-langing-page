@@ -1,8 +1,22 @@
+@font-face {
+  font-family: "Alata";
+  src: url("../fonts/Alata-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Josefine Sans";
+  src: url("../fonts/JosefinSans-Light.ttf") format("truetype");
+  font-weight: 300;
+}
 :root {
   --clr-white: white;
   --clr-black: black;
   --clr-dark-gray: #8c8c8c;
   --clr-very-dark-gray: dimgray;
+  --ff-Alata: 'Alata', sans-serif;
+  --ff-Jose: 'Josefin Sans', sans-serif;
+  --fw-regular: 400;
+  --fw-thin: 300;
 }
 
 * {

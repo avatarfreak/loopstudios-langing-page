@@ -1,18 +1,7 @@
 @use './' as *;
-@use './color';
+@use './color' as *;
+@use './fonts' as *;
 
-$variables: (
-  "color": (
-    property: color,
-    class: clr,
-    values: (
-      white: color.$White,
-      black: color.$black,
-      dark-gray: color.$dark-gray,
-      very-dark-gray: color.$very-dark-gray,
-    ),
-  ),
-);
 :root {
-  @include custom-variables($variables);
+  @include custom-variables($colors, $fonts);
 }
