@@ -1,3 +1,10 @@
+:root {
+  --clr-white: white;
+  --clr-black: black;
+  --clr-dark-gray: #8c8c8c;
+  --clr-very-dark-gray: dimgray;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -38,10 +45,22 @@ body {
 }
 
 header {
-  background: url("../../images/mobile/image-hero.jpg");
+  background: url("../images/mobile/image-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.navbar__nav {
+  position: absolute;
+  inset: 0;
+  text-align: left;
   min-height: 100vh;
 }
 

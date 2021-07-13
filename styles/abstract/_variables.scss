@@ -1,0 +1,18 @@
+@use './' as *;
+@use './color';
+
+$variables: (
+  "color": (
+    property: color,
+    class: clr,
+    values: (
+      white: color.$White,
+      black: color.$black,
+      dark-gray: color.$dark-gray,
+      very-dark-gray: color.$very-dark-gray,
+    ),
+  ),
+);
+:root {
+  @include custom-variables($variables);
+}

@@ -1,6 +1,7 @@
 @use "../abstract/" as *;
+
 header {
-  background: url("../../images/mobile/image-hero.jpg");
-  @include backcover();
+  background: url("../images/mobile/image-hero.jpg");
+  @include background-cover();
   min-height: 100vh;
 }

@@ -1,0 +1,12 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &__nav {
+    position: absolute;
+    inset: 0;
+    text-align: left;
+    min-height: 100vh;
+  }
+}

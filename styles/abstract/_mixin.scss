@@ -1,5 +1,15 @@
-@mixin backcover {
+@use "sass:map";
+
+@mixin background-cover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+@mixin custom-variables($class: null) {
+  @each $order, $family in $class {
+    @each $genus, $species in map.get($family, "values") {
+      --#{map.get($family, 'class')}-#{$genus}: #{$species};
+    }
+  }
 }
