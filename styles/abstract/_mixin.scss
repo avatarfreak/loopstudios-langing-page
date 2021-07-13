@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "sass:map";
 @use "../function" as *;
 
@@ -6,6 +7,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+//background-overlay
+@mixin bg-img-overlay($path: null) {
+  @if $path != null {
+    background-image: url($path), linear-gradient(to bottom, transparent, hsla(0, 0%, 1%, 0.635));
+    background-blend-mode: multiply;
+  }
 }
 
 //Custom-variables
@@ -28,7 +37,7 @@
 
 //aspect ratio
 @mixin aspect-ratio($width, $height) {
-  padding-top: ($height / $width) * 100%;
+  padding-top: math.div($height, $width) * 100%;
   height: 0;
   max-height: $height;
   max-width: $width;
