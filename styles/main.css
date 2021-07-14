@@ -94,7 +94,7 @@ main {
   font-size: 2rem;
   font-family: var(--ff-fly-Jose);
   font-weight: var(--fw-wgt-thin);
-  border: 2px solid var(--clr-primary-white);
+  outline: 2px solid var(--clr-primary-white);
   padding: var(--s-space-3);
   text-transform: uppercase;
 }
@@ -107,16 +107,28 @@ main {
 }
 .navbar__logo {
   display: relative;
+  z-index: 2;
+}
+.navbar__logo img {
   width: 9.375rem;
-  z-index: 1;
 }
 .navbar__toggler {
   display: relative;
-  z-index: 1;
-  cursor: pointer;
+  z-index: 2;
 }
-.navbar__toggler #close {
+.navbar button {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+.navbar button#open.active {
   display: none;
+}
+.navbar button#close {
+  display: none;
+}
+.navbar button#close.active {
+  display: block;
 }
 .navbar .nav {
   text-align: left;
@@ -125,8 +137,9 @@ main {
   left: 0;
   width: 100%;
   display: none;
+  z-index: 1;
 }
-.navbar .nav .active {
+.navbar .nav.active {
   display: block;
 }
 .navbar .nav__list {
@@ -238,7 +251,7 @@ main {
   background-image: url("../images/mobile/image-grid.jpg"), linear-gradient(to bottom, transparent, rgba(3, 3, 3, 0.635));
   background-blend-mode: multiply;
 }
-.creations .gallery__item:nth-child(4) > * {
+.creations .gallery__item:nth-child(4) > span {
   max-width: 2rem;
 }
 .creations .gallery__item:nth-child(5) {
