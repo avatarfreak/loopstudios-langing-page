@@ -4,6 +4,10 @@
 .interactive {
   margin: var(--s-space-5) 0;
 
+  &__body {
+    padding-top: var(--s-space-4);
+  }
+
   &__image {
     background-image: url("../images/mobile/image-interactive.jpg");
     @include background-cover();
@@ -15,6 +19,10 @@
     margin-top: var(--s-space-4);
     margin-bottom: var(--s-space-4);
     text-transform: uppercase;
+
+    @include mq(md) {
+      margin-top: var(--s-space-4);
+    }
   }
   &__text {
     @include fonts-props(15, var(--ff-fly-Alata), var(--fw-wgt-regular), var(--l-leading-relaxed));

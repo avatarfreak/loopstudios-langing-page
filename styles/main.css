@@ -62,10 +62,6 @@ body {
   text-align: center;
 }
 
-main {
-  margin: var(--s-space-4);
-}
-
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -91,19 +87,37 @@ main {
   transform: translate(-50%, -50%);
   color: var(--clr-primary-white);
   width: calc(100vw - 4rem);
-  font-size: 2rem;
+  font-size: 2.1875rem;
   font-family: var(--ff-fly-Jose);
   font-weight: var(--fw-wgt-thin);
   outline: 2px solid var(--clr-primary-white);
   padding: var(--s-space-3);
   text-transform: uppercase;
 }
+@media only screen and (min-width: 375px) {
+  .header__title {
+    font-size: 2.625rem;
+    padding: var(--s-space-4);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .header__title {
+    font-size: 3.875rem;
+    padding: var(--s-space-4);
+    width: calc(100vw - 7rem);
+  }
+}
 
 .navbar {
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: var(--s-space-4);
+  padding: 2rem var(--s-space-4);
+}
+@media only screen and (min-width: 768px) {
+  .navbar {
+    padding: var(--s-space-5);
+  }
 }
 .navbar__logo {
   display: relative;
@@ -111,6 +125,11 @@ main {
 }
 .navbar__logo img {
   width: 9.375rem;
+}
+@media only screen and (min-width: 768px) {
+  .navbar__logo img {
+    width: 12rem;
+  }
 }
 .navbar__toggler {
   display: relative;
@@ -163,6 +182,9 @@ main {
 .interactive {
   margin: var(--s-space-5) 0;
 }
+.interactive__body {
+  padding-top: var(--s-space-4);
+}
 .interactive__image {
   background-image: url("../images/mobile/image-interactive.jpg");
   background-repeat: no-repeat;
@@ -181,6 +203,11 @@ main {
   margin-top: var(--s-space-4);
   margin-bottom: var(--s-space-4);
   text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+  .interactive__title {
+    margin-top: var(--s-space-4);
+  }
 }
 .interactive__text {
   font-size: 0.9375rem;
@@ -289,6 +316,15 @@ main {
   max-width: 8rem;
   bottom: 0;
   color: var(--clr-primary-white);
+}
+
+main {
+  margin: var(--s-space-4);
+}
+@media only screen and (min-width: 768px) {
+  main {
+    margin: var(--s-space-5);
+  }
 }
 
 .footer {
