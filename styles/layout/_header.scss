@@ -16,7 +16,7 @@
     width: calc(100vw - 4rem);
 
     @include fonts-props(32, var(--ff-fly-Jose), var(--fw-wgt-thin));
-    border: 2px solid var(--clr-primary-white);
+    outline: 2px solid var(--clr-primary-white);
     padding: var(--s-space-3);
     text-transform: uppercase;
   }
