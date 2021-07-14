@@ -34,7 +34,7 @@
       }
       &:nth-child(4) {
         @include bg-img-overlay("../images/mobile/image-grid.jpg");
-        & > * {
+        & > span {
           max-width: 2rem;
         }
       }
