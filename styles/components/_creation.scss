@@ -4,7 +4,8 @@
 //place holder
 
 .creations {
-  margin-top: var(--s-space-4);
+  margin-top: var(--s-space-6);
+  margin-bottom: var(--s-space-6);
 
   &__title {
     @include fonts-props(30, var(--ff-fly-Jose), var(--fw-wgt-thin), var(--l-leading-tight));

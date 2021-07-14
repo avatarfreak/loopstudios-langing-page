@@ -1,11 +1,12 @@
 .footer {
   background: var(--clr-primary-black);
-  padding: var(--s-space-4);
-  margin-top: var(--s-space-5);
+  padding: var(--s-space-5);
+  margin-top: var(--s-space-6);
 
   &__title {
     padding-bottom: var(--s-space-3);
-    max-width: to-rem(150);
+    text-align: center;
+    display: inline-block;
   }
 
   &__item {
@@ -15,7 +16,7 @@
   &__link {
     display: block;
     color: var(--clr-primary-white);
-    padding: var(--s-space-2) 0;
+    padding: var(--s-space-3) 0;
   }
 
   &__social {
