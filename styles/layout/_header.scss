@@ -13,14 +13,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--clr-primary-white);
-    width: 100%;
+    width: calc(100vw - 4rem);
 
-    h1 {
-      @include fonts-props(32, var(--ff-fly-Jose), var(--fw-wgt-thin));
-      border: 2px solid var(--clr-primary-white);
-      padding: var(--s-space-3);
-      margin: var(--s-space-4);
-      text-transform: uppercase;
-    }
+    @include fonts-props(32, var(--ff-fly-Jose), var(--fw-wgt-thin));
+    border: 2px solid var(--clr-primary-white);
+    padding: var(--s-space-3);
+    text-transform: uppercase;
   }
 }
