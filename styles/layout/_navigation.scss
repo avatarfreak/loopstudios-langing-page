@@ -1,17 +1,25 @@
 @use '../function/index' as *;
-@use '../abstract/mixin' as *;
+@use '../abstract' as *;
 
 .navbar {
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: var(--s-space-4);
+  padding: 2rem var(--s-space-4);
+
+  @include mq("md") {
+    padding: var(--s-space-5);
+  }
 
   &__logo {
     display: relative;
     z-index: 2;
     & img {
       width: to-rem(150);
+
+      @include mq("md") {
+        width: to-rem(192);
+      }
     }
   }
 
