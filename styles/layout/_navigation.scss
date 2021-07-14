@@ -9,18 +9,32 @@
 
   &__logo {
     display: relative;
-    width: to-rem(150);
-    z-index: 1;
+    z-index: 2;
+    & img {
+      width: to-rem(150);
+    }
   }
 
   &__toggler {
     display: relative;
-    z-index: 1;
+    z-index: 2;
+  }
 
+  & button {
     cursor: pointer;
+    background: transparent;
+    border: 0;
 
-    #close {
+    &#open.active {
       display: none;
+    }
+
+    &#close {
+      display: none;
+
+      &.active {
+        display: block;
+      }
     }
   }
 
@@ -31,8 +45,9 @@
     left: 0;
     width: 100%;
     display: none;
+    z-index: 1;
 
-    & .active {
+    &.active {
       display: block;
     }
 
