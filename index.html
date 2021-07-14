@@ -9,6 +9,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/main.css">
+  <script src="./js/script.js" defer></script>
 
   <title>Frontend Mentor | Loopstudios landing page</title>
 
@@ -20,24 +21,26 @@
   <div class="wrapper">
     <header class="header">
       <div class="navbar">
-        <div class="navbar__brand">
-          <a href="/">
-            <img class="navbar__logo" src="./images/logo.svg" alt="loopstudios logo" />
-          </a>
-        </div>
+        <a href="/" class="navbar__logo">
+          <img src="./images/logo.svg" alt="loopstudios home" />
+        </a>
 
         <div class="navbar__toggler">
-          <img src="./images/icon-hamburger.svg" alt="Menu open" id="open">
-          <img src="./images/icon-close.svg" alt="Menu close" id="close">
+          <button id="open">
+            <img src="./images/icon-hamburger.svg" alt="Menu open">
+          </button>
+          <button id="close">
+            <img src="./images/icon-close.svg" alt="Menu close">
+          </button>
         </div>
 
         <nav class="navbar__nav nav">
           <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link" href="#">About</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Careers</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Events</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Products</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Support</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">Careers</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">Events</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">Products</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">Support</a></li>
           </ul>
         </nav>
       </div>
@@ -66,33 +69,33 @@
 
         <ul class="creations__gallery gallery">
           <li class="gallery__item gallery__item-bg-img">
-            <a href="#" class="gallery__link"><span class="gallery__caption">Deep earth </span></a>
+            <a href="#!" class="gallery__link"><span class="gallery__caption">Deep earth </span></a>
           </li>
           <li class="gallery__item gallery__item-bg-img">
-            <a href="#" class="gallery__link"><span class="gallery__caption">Night arcade </span></a>
+            <a href="#!" class="gallery__link"><span class="gallery__caption">Night arcade </span></a>
           </li>
           <li class="gallery__item gallery__item-bg-img">
-            <a href="#" class="gallery__link"><span class="gallery__caption">Soccer team VR</span></a>
+            <a href="#!" class="gallery__link"><span class="gallery__caption">Soccer team VR</span></a>
           </li>
           <li class="gallery__item gallery__item-bg-img">
-            <a href="#" class="gallery__link"><span class="gallery__caption">The grid</span></a>
+            <a href="#!" class="gallery__link"><span class="gallery__caption">The grid</span></a>
           </li>
           <li class="gallery__item gallery__item-bg-img">
-            <a href="#" class="gallery__link"><span class="gallery__caption">From up above VR</span></a>
+            <a href="#!" class="gallery__link"><span class="gallery__caption">From up above VR</span></a>
           </li>
           <li class="gallery__item gallery__item-bg-img">
-            <a href="#" class="gallery__link"><span class="gallery__caption">Pocket borealis</span></a>
+            <a href="#!" class="gallery__link"><span class="gallery__caption">Pocket borealis</span></a>
           </li>
           <li class="gallery__item gallery__item-bg-img">
-            <a href="#" class="gallery__link"><span class="gallery__caption">The curiosity</span></a>
+            <a href="#!" class="gallery__link"><span class="gallery__caption">The curiosity</span></a>
           </li>
           <li class="gallery__item gallery__item-bg-img">
-            <a href="#" class="gallery__link"><span class="gallery__caption">Make it fisheye</span></a>
+            <a href="#!" class="gallery__link"><span class="gallery__caption">Make it fisheye</span></a>
           </li>
         </ul>
 
         <div class="creations__btn">
-          <a href="#" class="creations__button outline-black" rel=”noreferrer”>See all</a>
+          <a href="#!" class="creations__button outline-black" rel=”noreferrer”>See all</a>
         </div>
       </section>
       <!-- end creations -->
@@ -108,11 +111,11 @@
             </a>
             <nav class="footer__nav">
               <ul class="footer__list">
-                <li class="footer__item"><a class="footer__link" href="#">About</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Careers</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Events</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Products</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Support</a></li>
+                <li class="footer__item"><a class="footer__link" href="#!">About</a></li>
+                <li class="footer__item"><a class="footer__link" href="#!">Careers</a></li>
+                <li class="footer__item"><a class="footer__link" href="#!">Events</a></li>
+                <li class="footer__item"><a class="footer__link" href="#!">Products</a></li>
+                <li class="footer__item"><a class="footer__link" href="#!">Support</a></li>
               </ul>
             </nav>
           </div>
@@ -120,22 +123,22 @@
             <div class="footer__social">
               <ul class="footer__social__list">
                 <li class="footer__social__item">
-                  <a class="footer__social__link" href="#">
+                  <a class="footer__social__link" href="#!">
                     <img class="footer__social__icon" src="images/icon-facebook.svg" alt="facebook icon">
                   </a>
                 </li>
                 <li class="footer__social__item">
-                  <a class="social__link" href="#">
+                  <a class="social__link" href="#!">
                     <img class="footer__social__icon" src="images/icon-twitter.svg" alt="twitter icon">
                   </a>
                 </li>
                 <li class="footer__social__item">
-                  <a class="footer__social__link" href="#">
+                  <a class="footer__social__link" href="#!">
                     <img class="footer__social__icon" src="images/icon-pinterest.svg" alt="pinterest icon">
                   </a>
                 </li>
                 <li class="footer__social__item">
-                  <a class="footer__social__link" href="#">
+                  <a class="footer__social__link" href="#!">
                     <img class="footer__social__icon" src="images/icon-instagram.svg" alt="instagram icon">
                   </a>
                 </li>
