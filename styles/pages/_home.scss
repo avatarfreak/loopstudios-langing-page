@@ -1,2 +1,12 @@
+@use '../abstract/' as *;
 @use '../components/interactive';
 @use '../components/creation';
+
+main {
+  margin: var(--s-space-4);
+
+  //tablet
+  @include mq("md") {
+    margin: var(--s-space-5);
+  }
+}
