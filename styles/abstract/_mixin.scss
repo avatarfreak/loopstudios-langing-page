@@ -74,3 +74,53 @@
   display: grid;
   grid-row: $start / span $end;
 }
+
+@mixin transition($prop: all, $duration: 0.3s) {
+  transition: $prop $duration ease-in-out;
+}
+//underline-transition
+@mixin underline-transition() {
+  & {
+    position: relative;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-bottom: 2px solid white;
+    transform: scale(0);
+    transform-origin: (0, 0);
+    margin-top: 2rem;
+    visibility: hidden;
+
+    @include transition(transform);
+  }
+  &:hover:after {
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+//translucent transition
+@mixin translucent-transition($selector) {
+  & {
+    position: relative;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--clr-primary-white);
+    opacity: 0;
+    @include transition(opacity);
+  }
+  &:hover {
+    .#{$selector} {
+      color: var(--clr-primary-black);
+      z-index: 1;
+    }
+    &::before {
+      opacity: 40%;
+    }
+  }
+}
