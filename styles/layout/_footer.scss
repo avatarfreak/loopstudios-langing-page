@@ -1,16 +1,51 @@
+@use "../abstract" as *;
+/* - - - - - - - - footer- - - - - - - - -*/
+
 .footer {
   background: var(--clr-primary-black);
   padding: var(--s-space-5);
   margin-top: var(--s-space-6);
 
+  &__body {
+    @include mq("lg") {
+      margin: var(--s-space-0) var(--s-space-4);
+      @include grid-column-center(2, 1fr);
+    }
+  }
+
+  &__left {
+    @include mq(lg) {
+      text-align: left;
+    }
+  }
+
+  &__right {
+    @include mq(lg) {
+      text-align: right;
+    }
+  }
+
   &__title {
     padding-bottom: var(--s-space-3);
     text-align: center;
     display: inline-block;
-  }
 
+    @include mq(lg) {
+      width: to-rem(150);
+    }
+  }
+  &__list {
+    @include mq(lg) {
+      display: flex;
+    }
+  }
   &__item {
     line-height: var(--l-leading-normal);
+
+    @include mq(lg) {
+      padding: 0;
+      margin-right: var(--s-space-2);
+    }
   }
 
   &__link {
@@ -21,10 +56,18 @@
 
   &__social {
     margin: var(--s-space-4);
+
+    @include mq(lg) {
+      margin-right: var(--s-space-0);
+    }
     &__list {
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @include mq(lg) {
+        justify-content: flex-end;
+      }
     }
     &__item {
       padding: var(--s-space-2);
