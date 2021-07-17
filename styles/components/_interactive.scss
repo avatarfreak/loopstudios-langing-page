@@ -1,17 +1,30 @@
 @use '../abstract' as *;
 @use '../function/' as *;
 
+/* - - - - - - - - Interactive- - - - - - - - -*/
+
 .interactive {
   margin: var(--s-space-5) 0;
 
   &__body {
     padding-top: var(--s-space-4);
+
+    @include mq("lg") {
+      @include grid-column(12);
+      text-align: left;
+    }
   }
 
   &__image {
     background-image: url("../images/mobile/image-interactive.jpg");
     @include background-cover();
     @include aspect-ratio(654px, 448px);
+
+    @include mq("lg") {
+      background-image: url("../images/desktop/image-interactive.jpg");
+      @include col-span(1, 12);
+      @include row-span(1, 5);
+    }
   }
 
   &__title {
@@ -23,9 +36,28 @@
     @include mq(md) {
       margin-top: var(--s-space-4);
     }
+
+    @include mq("lg") {
+      @include col-span(9, 4);
+      @include row-span(2, 2);
+
+      padding: var(--s-space-5) var(--s-space-4);
+      background: var(--clr-primary-white);
+      font-size: to-rem(26px);
+    }
   }
+
   &__text {
     @include fonts-props(15, var(--ff-fly-Alata), var(--fw-wgt-regular), var(--l-leading-relaxed));
     color: var(--clr-primary-very-dark-gray);
+
+    @include mq("lg") {
+      @include col-span(9, 4);
+      @include row-span(3, 3);
+
+      background: var(--clr-primary-white);
+      margin-top: var(--s-space-6);
+      padding: 0 var(--s-space-4);
+    }
   }
 }
