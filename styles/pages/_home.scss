@@ -5,8 +5,11 @@
 main {
   margin: var(--s-space-4);
 
+  @include mq("sm") {
+    margin: var(--s-space-5);
+  }
   //tablet
   @include mq("md") {
-    margin: var(--s-space-5);
+    margin: var(--s-space-6);
   }
 }
