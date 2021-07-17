@@ -1,11 +1,20 @@
 @use "../abstract/" as *;
 @use "../function" as *;
 
+/* - - - - - - - - Header- - - - - - - - -*/
+
 .header {
-  background: url("../images/mobile/image-hero.jpg");
+  @include bg-img-overlay("../images/mobile/image-hero.jpg");
   @include background-cover();
   min-height: 100vh;
   position: relative;
+
+  @include mq("lg") {
+    @include bg-img-overlay("../images/desktop/image-hero.jpg");
+    @include background-cover();
+    min-height: 0;
+    height: to-rem(650px);
+  }
 
   &__title {
     text-align: left;
@@ -24,11 +33,19 @@
     @include mq("sm") {
       font-size: to-rem(42);
       padding: var(--s-space-4);
+      width: calc(100vw - 6rem);
     }
     @include mq("md") {
       font-size: to-rem(62);
       padding: var(--s-space-4);
-      width: calc(100vw - 7rem);
+      width: calc(100vw - 10.5rem);
+    }
+
+    @include mq("lg") {
+      max-width: to-rem(500px);
+      left: 0;
+      transform: translate(0, -50%);
+      margin-left: var(--s-space-6);
     }
   }
 }

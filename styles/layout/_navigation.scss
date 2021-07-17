@@ -1,18 +1,23 @@
 @use '../function/index' as *;
 @use '../abstract' as *;
+/* - - - - - - - - Navigation- - - - - - - - -*/
 
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
   padding: 2rem var(--s-space-4);
 
+  @include mq("sm") {
+    padding: var(--s-space-5) var(--s-space-5);
+  }
+
   @include mq("md") {
-    padding: var(--s-space-5);
+    padding: var(--s-space-5) var(--s-space-6);
   }
 
   &__logo {
-    display: relative;
     z-index: 2;
     & img {
       width: to-rem(150);
@@ -24,8 +29,11 @@
   }
 
   &__toggler {
-    display: relative;
     z-index: 2;
+
+    @include mq("lg") {
+      display: none;
+    }
   }
 
   & button {
@@ -55,6 +63,11 @@
     display: none;
     z-index: 1;
 
+    @include mq("lg") {
+      display: block;
+      position: unset;
+    }
+
     &.active {
       display: block;
     }
@@ -65,6 +78,13 @@
       flex-direction: column;
       background: var(--clr-primary-black);
       min-height: 100vh;
+
+      @include mq("lg") {
+        flex-direction: row;
+        justify-content: flex-end;
+        min-height: 0;
+        background: transparent;
+      }
     }
 
     &__item {
@@ -75,6 +95,10 @@
       @include fonts-props(24, var(--ff-fly-Alata), var(--fw-wgt-regular));
       color: var(--clr-primary-white);
       display: block;
+
+      @include mq("lg") {
+        font-size: to-rem(15px);
+      }
     }
   }
 }
