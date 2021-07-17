@@ -113,6 +113,8 @@
 
       @include mq("lg") {
         font-size: to-rem(15px);
+
+        @include underline-transition();
       }
 
       @include mq("3xl") {

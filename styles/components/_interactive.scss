@@ -102,7 +102,7 @@
     @include mq("xl") {
       @include col-span(8, 5);
       @include row-span(4, 2);
-      padding-top: 8rem;
+      padding-top: 9rem;
       padding-left: 3rem;
       margin-top: 0;
     }

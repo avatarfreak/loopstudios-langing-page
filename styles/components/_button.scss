@@ -9,7 +9,7 @@
   cursor: pointer;
   padding: var(--s-space-2) var(--s-space-5);
   text-transform: uppercase;
-
+  @include transition();
   @include mq("xl") {
     padding: var(--s-space-3) var(--s-space-5);
   }
