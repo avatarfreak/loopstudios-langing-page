@@ -12,4 +12,11 @@ main {
   @include mq("md") {
     margin: var(--s-space-6);
   }
+  @include mq("xl") {
+    margin: var(--s-space-7);
+  }
+
+  @include mq("2xl") {
+    margin: var(--s-space-8);
+  }
 }

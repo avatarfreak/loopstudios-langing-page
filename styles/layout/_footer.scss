@@ -1,4 +1,5 @@
 @use "../abstract" as *;
+@use "../function" as *;
 /* - - - - - - - - footer- - - - - - - - -*/
 
 .footer {
@@ -6,10 +7,21 @@
   padding: var(--s-space-5);
   margin-top: var(--s-space-6);
 
+  @include mq("lg") {
+    padding: 0;
+  }
+
   &__body {
     @include mq("lg") {
-      margin: var(--s-space-0) var(--s-space-4);
       @include grid-column-center(2, 1fr);
+      padding: var(--s-space-5) var(--s-space-6);
+    }
+
+    @include mq("xl") {
+      padding: var(--s-space-5) var(--s-space-7);
+    }
+    @include mq("2xl") {
+      padding: var(--s-space-5) var(--s-space-8);
     }
   }
 
@@ -32,6 +44,7 @@
 
     @include mq(lg) {
       width: to-rem(150);
+      padding-bottom: 0;
     }
   }
   &__list {
@@ -44,7 +57,7 @@
 
     @include mq(lg) {
       padding: 0;
-      margin-right: var(--s-space-2);
+      margin-right: var(--s-space-3);
     }
   }
 
@@ -52,10 +65,17 @@
     display: block;
     color: var(--clr-primary-white);
     padding: var(--s-space-3) 0;
+
+    @include mq("lg") {
+      padding: var(--s-space-3) 0 0 0;
+    }
   }
 
   &__social {
     margin: var(--s-space-4);
+    @include mq("lg") {
+      margin: 0;
+    }
 
     @include mq(lg) {
       margin-right: var(--s-space-0);
@@ -70,11 +90,17 @@
       }
     }
     &__item {
-      padding: var(--s-space-2);
+      padding: var(--s-space-3);
     }
   }
   &__copyright {
-    font-size: to-rem(12);
+    font-weight: var(--fw-wgt-regular);
+    font-size: to-rem(12px);
     color: var(--clr-primary-dark-gray);
+
+    @include mq("lg") {
+      font-size: to-rem(15px);
+      padding-top: var(--s-space-3);
+    }
   }
 }

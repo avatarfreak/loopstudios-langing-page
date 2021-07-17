@@ -8,9 +8,13 @@
   margin-top: var(--s-space-6);
   margin-bottom: var(--s-space-6);
 
+  @include mq("xl") {
+    margin-top: var(--s-space-7);
+  }
+
   &__body {
     @include mq("lg") {
-      @include grid-column(4);
+      @include grid-column(4, minmax(auto, 1fr));
     }
   }
 
@@ -24,6 +28,17 @@
       font-size: to-rem(36px);
       justify-self: start;
       @include col-span(1, 2);
+    }
+
+    @include mq("xl") {
+      font-size: to-rem(40px);
+    }
+
+    @include mq("2xl") {
+      font-size: to-rem(48px);
+    }
+    @include mq("3xl") {
+      font-size: to-rem(64px);
     }
   }
 
@@ -41,8 +56,17 @@
       @include col-span(1, 4);
       @include row-span(2, 1);
 
-      @include grid-column(auto-fit, minmax(256px, 1fr));
+      @include grid-column(auto-fit, minmax(243px, 1fr));
       gap: var(--s-space-4);
+    }
+
+    @include mq("xl") {
+      @include grid-column(4, minmax(256px, 1fr));
+      gap: 2rem;
+    }
+
+    @include mq("3xl") {
+      gap: 2.5rem;
     }
     &__item {
       &-bg-img {

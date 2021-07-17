@@ -17,6 +17,16 @@
     padding: var(--s-space-5) var(--s-space-6);
   }
 
+  @include mq("xl") {
+    padding: var(--s-space-5) 0;
+    margin: 0 var(--s-space-7);
+  }
+
+  @include mq("2xl") {
+    padding-top: 80px;
+    margin: 0 var(--s-space-8);
+  }
+
   &__logo {
     z-index: 2;
     & img {
@@ -89,6 +99,11 @@
 
     &__item {
       padding: var(--s-space-3) var(--s-space-4);
+
+      @include mq("lg") {
+        padding: 0;
+        margin-left: var(--s-space-4);
+      }
     }
 
     &__link {
@@ -98,6 +113,10 @@
 
       @include mq("lg") {
         font-size: to-rem(15px);
+      }
+
+      @include mq("3xl") {
+        font-size: to-rem(18px);
       }
     }
   }

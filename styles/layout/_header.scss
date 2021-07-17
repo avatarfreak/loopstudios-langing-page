@@ -31,9 +31,9 @@
     text-transform: uppercase;
 
     @include mq("sm") {
-      font-size: to-rem(42);
+      font-size: to-rem(32);
       padding: var(--s-space-4);
-      width: calc(100vw - 6rem);
+      width: calc(100vw - 7.5rem);
     }
     @include mq("md") {
       font-size: to-rem(62);
@@ -43,9 +43,25 @@
 
     @include mq("lg") {
       max-width: to-rem(500px);
+      top: 60%;
       left: 0;
       transform: translate(0, -50%);
       margin-left: var(--s-space-6);
+    }
+
+    @include mq("xl") {
+      max-width: to-rem(600px);
+      margin-left: var(--s-space-7);
+    }
+
+    @include mq("2xl") {
+      max-width: to-rem(647px);
+      margin-left: var(--s-space-8);
+      font-size: to-rem(72px);
+    }
+    @include mq("3xl") {
+      max-width: to-rem(735px);
+      padding: 2rem;
     }
   }
 }

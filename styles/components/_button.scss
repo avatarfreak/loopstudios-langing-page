@@ -10,6 +10,10 @@
   padding: var(--s-space-2) var(--s-space-5);
   text-transform: uppercase;
 
+  @include mq("xl") {
+    padding: var(--s-space-3) var(--s-space-5);
+  }
+
   &:hover {
     color: var(--clr-primary-white);
     background-color: var(--clr-primary-black);
