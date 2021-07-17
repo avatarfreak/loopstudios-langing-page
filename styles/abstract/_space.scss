@@ -1,3 +1,4 @@
+@use "sass:math";
 $space: 1rem;
 
 $spaces: (
@@ -12,6 +13,8 @@ $spaces: (
       4: $space * 1.5,
       5: $space * 3,
       6: $space * 5,
+      7: $space * math.div(120, 16),
+      8: $space * math.div(160, 16),
     ),
   ),
 );
