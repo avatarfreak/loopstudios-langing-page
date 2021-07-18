@@ -22,12 +22,14 @@ a {
 body {
   font-family: "Aalata", sans-serif;
   font-size: 15px;
+  background: var(--clr-primary-black);
 }
 .wrapper {
   min-height: 100vh;
   margin: 0 auto;
   text-align: center;
   max-width: 1920px;
+  background: var(--clr-primary-white);
 }
 
 .attribution {
