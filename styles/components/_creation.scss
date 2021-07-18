@@ -81,6 +81,15 @@
           margin: var(--s-space-0);
 
           @include translucent-transition(gallery__caption);
+
+          width: 1px;
+          opacity: 0;
+          transition: opacity 0s linear, width 2s ease-out;
+        }
+
+        &.active {
+          opacity: 1;
+          width: 100%;
         }
       }
 
