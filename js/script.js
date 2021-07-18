@@ -8,3 +8,33 @@ menuToggle.addEventListener("click", (evt) => {
   openMenu.classList.toggle("active");
   closeMenu.classList.toggle("active");
 });
+
+//Intersection observer API
+
+//get all background image selector as an Array
+const items = document.querySelectorAll(".gallery .gallery__item-bg-img");
+
+const imageOptions = {};
+
+//collect all background image selector and stage for observing
+const target = (items, observer) => {
+  items.forEach((item) => {
+    observer.observe(item);
+  });
+};
+
+//mechanism for image transition
+const imageToReveal = (entries) => {
+  entries.forEach((entry) => {
+    let elem = entry.target;
+    if (entry.isIntersecting) {
+      elem.classList.add("active");
+    } else {
+      elem.classList.remove("active");
+    }
+  });
+};
+
+//Invoke IntersectionObserver
+const Observer = new IntersectionObserver(imageToReveal, imageOptions);
+target(items, Observer);
