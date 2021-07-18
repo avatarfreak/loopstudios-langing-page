@@ -1,12 +1,14 @@
 @font-face {
   font-family: "Alata";
-  src: url("../fonts/Alata-Regular.ttf") format("truetype");
+  src: url("../fonts/Alata-Regular.ttf");
   font-weight: 400;
+  font-style: regular;
 }
 @font-face {
   font-family: "Josefine Sans";
-  src: url("../fonts/JosefinSans-Light.ttf") format("truetype");
+  src: url("../fonts/JosefinsSans-Light.ttf");
   font-weight: 300;
+  font-style: light;
 }
 :root {
   --clr-primary-white: white;
@@ -579,6 +581,9 @@ body {
     max-height: 450px;
     height: 450px;
     margin: var(--s-space-0);
+    width: 1px;
+    opacity: 0;
+    transition: opacity 0s linear, width 2s ease-out;
   }
   .creations .gallery__item-bg-img {
     position: relative;
@@ -598,6 +603,10 @@ body {
   .creations .gallery__item-bg-img:hover::before {
     opacity: 40%;
   }
+}
+.creations .gallery__item-bg-img.active {
+  opacity: 1;
+  width: 100%;
 }
 .creations .gallery__item:first-child {
   background-image: url("../images/mobile/image-deep-earth.jpg"), linear-gradient(to bottom, transparent, rgba(3, 3, 3, 0.635));

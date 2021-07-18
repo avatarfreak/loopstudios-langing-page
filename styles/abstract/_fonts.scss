@@ -1,14 +1,14 @@
-@font-face {
-  font-family: "Alata";
-  src: url("../fonts/Alata-Regular.ttf") format("truetype");
-  font-weight: 400;
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($path + ".ttf");
+    font-weight: $weight;
+    font-style: $style;
+  }
 }
 
-@font-face {
-  font-family: "Josefine Sans";
-  src: url("../fonts/JosefinSans-Light.ttf") format("truetype");
-  font-weight: 300;
-}
+@include font-face("Alata", "../fonts/Alata-Regular", 400, regular);
+@include font-face("Josefine Sans", "../fonts/JosefinsSans-Light", 300, light);
 
 $regular: 400;
 $thin: 300;
